@@ -66,7 +66,7 @@ class Board extends React.Component {
                 <div>Preostalo poteza: {this.state.attempts}</div>
                 {images.map((el, index) => {
                     return <img className="col s4" height="150" width="150"
-                        onClick={() => this.imageHandler(index)} src={`/images/${this.state.status[index] === 0 ? joker : el}`} />
+                        onClick={() => this.imageHandler(index)} key={index} src={`/images/${this.state.status[index] === 0 ? joker : el}`} alt="nophoto" />
                 })}
             </div>
         );
